@@ -4,14 +4,15 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}",
-                "C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/tr1"
+                "D:/Program Files/CodeBlocks/MinGW/include",
+                "C:/MinGW/include"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
             ],
-            "compilerPath": "C:\\MinGW\\bin\\gcc.exe",
+            "compilerPath": "D:/Program Files/CodeBlocks/MinGW/bin/gcc.exe",
             "browse": {
                 "databaseFilename": "",
                 "limitSymbolsToIncludedHeaders": true,
