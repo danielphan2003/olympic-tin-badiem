@@ -4,7 +4,6 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}",
-                "D:/Program Files/CodeBlocks/MinGW/include",
                 "C:/MinGW/include"
             ],
             "defines": [
