@@ -2,13 +2,29 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "compile and run C",
+            "label": "build & debug file",
             "type": "shell",
-            "command": "g++ ${file} -o ${fileBasenameNoExtension}; ./${fileBasenameNoExtension} ",
-            "presentation": {
-                "reveal": "always",
-                "panel": "shared"
-            },
+            "command": "g++",
+            "args": [
+                "-g",
+                "-o",
+                "${fileBasenameNoExtension}",
+                "${file}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "build & run file",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-o",
+                "${fileBasenameNoExtension}",
+                "${file}"
+            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
