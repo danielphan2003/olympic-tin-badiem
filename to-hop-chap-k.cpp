@@ -2,6 +2,8 @@
 
 using namespace std;
 
+<<<<<<< HEAD
+=======
 int n, k;
 int C[1000010], dem_so_nghiem;
 
@@ -27,4 +29,5 @@ int main() {
     C[0] = 0;
     to_hop(1);
     cout << dem_so_nghiem;
+>>>>>>> b6f534ef6843d2a3ba1b76c494d80cf2835f8350
 }
