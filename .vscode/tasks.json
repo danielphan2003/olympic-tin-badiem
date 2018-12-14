@@ -4,27 +4,24 @@
         {
             "label": "build & debug file",
             "type": "shell",
-            "command": "g++",
-            "args": [
-                "-g",
-                "-o",
-                "${fileBasenameNoExtension}",
-                "${file}"
-            ],
+            "command": "g++ ${file} -g -o ${fileBasenameNoExtension}; ./${fileBasenameNoExtension}",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
             "group": {
-                "kind": "build",
+                "kind": "test",
                 "isDefault": true
             }
         },
         {
             "label": "build & run file",
             "type": "shell",
-            "command": "g++",
-            "args": [
-                "-o",
-                "${fileBasenameNoExtension}",
-                "${file}"
-            ],
+            "command": "g++ ${file} -o ${fileBasenameNoExtension}; ./${fileBasenameNoExtension}",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
             "group": {
                 "kind": "build",
                 "isDefault": true
