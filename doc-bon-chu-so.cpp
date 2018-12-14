@@ -1,14 +1,11 @@
-#include <iostream>
+#include <fstream>
 using namespace std;
 
-int main()
-{
-    int N;
-    cout << "Nhap so nguyen khong am N < 1000 : ";
-    cin >> N;
+ifstream in;
+ofstream out;
 
+void process(int N) {
     string dv[] = {"KHONG", "MOT", "HAI", "BA", "BON", "NAM", "SAU", "BAY", "TAM", "CHIN"};
-    cout << N << " doc la ";
 
     int 
         hangTram = N/100,
@@ -16,23 +13,38 @@ int main()
         hangChuc = (N/10)%10;
 
     if (hangTram != 0) {
-        cout << dv[hangTram] << " TRAM";
+        out << dv[hangTram] << " TRAM";
         if (hangChuc == 0) {
             if (hangDv != 0) 
-                cout << " LE " << dv[hangDv];
+                out << " LE " << dv[hangDv];
         }
         else if (hangDv == 0) {
-            cout << " " << dv[hangChuc] << " MUOI";
+            out << " " << dv[hangChuc] << " MUOI";
         }
         else 
-            cout << " " << dv[hangChuc] << " MUOI " << dv[hangDv];
+            out << " " << dv[hangChuc] << " MUOI " << dv[hangDv];
     }
     else if (hangChuc != 0) {
-        cout << dv[hangChuc] << " MUOI";
+        out << dv[hangChuc] << " MUOI";
         if (hangDv != 0) 
-            cout << " " << dv[hangDv];
+            out << " " << dv[hangDv];
     }
-    else cout << dv[hangDv];
+    else out << dv[hangDv];
+}
 
-    return 0;
+int main()
+{
+    in.open("input/doc-bon-chu-so.inp");
+    out.open("output/doc-bon-chu-so.out");
+    
+    int N;
+    while (!in.eof()) {
+        in >> N;
+        out << N << ": ";
+        process(N);
+        out << endl;
+    }
+
+    in.close();
+    out.close();
 }
