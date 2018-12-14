@@ -2,34 +2,32 @@
 
 using namespace std;
 
-int C[101][101];
+<<<<<<< HEAD
+=======
+int n, k;
+int C[1000010], dem_so_nghiem;
 
-void tinh() {
-    for (int n = 0; n <= 100; ++n)
-        C[0][n] = C[n][n] = 1;
-    for (int n = 1; n <= 100; ++n)
-        for (int k = 1; k <= n-1; ++k)
-            C[k][n] = C[k-1][n-1] + C[k][n-1];
+void ghi_nghiem() {
+    dem_so_nghiem++;
+    for (int i = 1; i <= k; i++)
+        cout << C[i] << ' ';
+    cout << endl;
 }
 
-int find_C(int k, int n) {
-    if (C[k][n] > -1)
-        return C[k][n];
-    if (k == 0 || k == n)
-        return C[k][n] = 1;
-    else
-        return C[k][n] = find_C(k-1,n-1) + find_C(k,n-1);
+void to_hop(int i) {
+    for (int v = C[i-1]+1; v <= n-k+i; ++v) {
+        C[i] = v;
+        if (i == k) {
+            ghi_nghiem();
+        } else
+            to_hop(i+1);
+    }
 }
 
 int main() {
-    int a, b;
-    cin >> a >> b;
-    
-    tinh();
-    for (int k = 0; k <= 100; ++k)
-        for (int n = 0; n <= 100; ++n)
-            C[k][n] = -1;
-    
-    cout << find_C(a,b);
-    return 0;
+    cin >> n >> k;
+    C[0] = 0;
+    to_hop(1);
+    cout << dem_so_nghiem;
+>>>>>>> b6f534ef6843d2a3ba1b76c494d80cf2835f8350
 }
