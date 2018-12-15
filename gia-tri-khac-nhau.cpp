@@ -23,7 +23,7 @@ int main() {
             }
             for (j = curr + 1; j < n; j++) {
                 a[j] = a[j+xuat_hien+1];
-                a[j+xaut_hien+1] = 0;
+                a[j+xuat_hien+1] = 0;
             }
             n = n-xuat_hien;
             i--;
