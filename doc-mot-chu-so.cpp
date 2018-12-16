@@ -6,8 +6,8 @@ ofstream out;
 
 int main()
 {
-    in.open("input/doc-mot-chu-so.inp");
-    out.open("output/doc-mot-chu-so.out");
+    in.open("doc-mot-chu-so.inp");
+    out.open("doc-mot-chu-so.out");
 
     int N;
     string s[] = {"KHONG", "MOT", "HAI", "BA", "BON", "NAM", "SAU", "BAY", "TAM", "CHIN"};

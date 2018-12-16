@@ -4,9 +4,9 @@ using namespace std;
 
 int main() {
     ifstream in;
-    in.open("input/demo-file-2.inp");
+    in.open("demo-file-2.inp");
     ofstream out;
-    out.open("output/demo-file-2.out");
+    out.open("demo-file-2.out");
 
     int n, max = 0;
     in >> n;

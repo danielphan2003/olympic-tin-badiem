@@ -1,19 +1,23 @@
-#include <iostream>
+#include <fstream>
 using namespace std;
 
 int main()
 {
-    float a, b;
-    cout << "Nhap 2 so a, b : ";
-    cin >> a >> b;
+    ifstream in("pt-bac-nhat.inp");
+    ofstream out("pt-bac-nhat.out");
 
-    if (a == 0) {
-        if (b != 0) {
-            cout << "Phuong trinh vo nghiem";
+    while (!in.eof())
+    {
+        float a, b; 
+        in >> a >> b;
+
+        if (a == 0) 
+        {
+            if (b != 0) 
+                out << "NO SOLUTION" << endl;
+            else out << "ALL REAL NUMBERS" << endl;
         }
-        else cout << "Phuong trinh co vo so nghiem";
+        else 
+            out << -b/a << endl;
     }
-    else cout << "Phuong trinh co nghiem duy nhat x = -b/a = " << -b/a;
-
-    return 0;
 }

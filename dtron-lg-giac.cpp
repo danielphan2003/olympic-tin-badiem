@@ -1,20 +1,27 @@
-#include <iostream>
+#include <fstream>
 using namespace std;
 
 int main()
 {
+    ifstream in;
+    in.open("dtron-lg-giac.inp");
+    ofstream out;
+    out.open("dtron-lg-giac.out");
+    
     float N;
-    cout << "Nhap so do N: ";
-    cin >> N;
-
-    int dem = 0, t;
-    for (int i = 0; i < 360; i += 90) {
-        dem++;
-        if ((N >= i) && (N < i + 90)) {
-            t = dem;
+    while (!in.eof()) {
+        in >> N;
+        int dem = 0, t;
+        for (int i = 0; i < 360; i += 90) {
+            dem++;
+            if ((N >= i) && (N < i + 90)) {
+                t = dem;
+            }
         }
+
+        out << N << " : " << t << endl;
     }
 
-    cout << endl << "So do N thuoc cung phan tu so " << t << " cua duong tron luong giac";
-    return 0;
+    in.close();
+    out.close();
 }

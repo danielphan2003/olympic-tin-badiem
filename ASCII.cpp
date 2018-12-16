@@ -1,18 +1,20 @@
-#include <iostream>
+#include <fstream>
 using namespace std;
 
 int main()
 {
+    ifstream in;
+    in.open("ASCII.inp");
+    ofstream out;
+    out.open("ASCII.out");
+
     int n;
-    cout << "Nhap 1 so nguyen: ";
-    cin >> n;
-
-    cout << "Ky tu tuong ung: " << static_cast<char> (n) << endl;
-
     char c;
-    cout << "Nhap 1 ky tu: ";
-    cin >> c;
-    cout << "Ma ASCII: " << static_cast<int> (c);
+    while (!in.eof()) {
+        in >> n >> c;
+        out << static_cast<char> (n) << " : " << static_cast<int> (c) << endl;
+    }
 
-    return 0;
+    in.close();
+    out.close();
 }

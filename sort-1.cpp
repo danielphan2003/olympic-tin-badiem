@@ -1,17 +1,21 @@
-#include <iostream>
+#include <fstream>
 #include <algorithm>
 
 using namespace std;
-const int N = 100000;
 
-int main() {
-    int n, a[N], k;
-    cin >> n >> k;
-    for (int i = 0; i < n; i++) {
-        cin >> a[i];
+int main() 
+{
+    ifstream in("sort-1.inp");
+    ofstream out("sort-1.out");
+
+    int n, a[1000000], k;
+    in >> n >> k;
+    for (int i = 0; i < n; i++) 
+    {
+        in >> a[i];
     }
     
     sort(a, a+n);
-    cout << a[k];
+    out << a[k];
     return 0;
 }

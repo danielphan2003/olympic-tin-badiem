@@ -1,16 +1,16 @@
-#include <iostream>
+#include <fstream>
 using namespace std;
 
 int main()
 {
-    float a, b;
-    cout << "Nhap 2 so a, b : ";
-    cin >> a >> b;
+    ifstream in("P-va-S.inp");
+    ofstream out("P-va-S.out");
     
-    float 
-        P = 2*(a + b), 
-        S = a*b;
-    cout << endl << "Chu vi: " << P << endl;
-    cout << "Dien tich: " << S << endl;
-    return 0;
+    while (!in.eof()) {
+        float a, b;
+        in >> a >> b;
+
+        float P = 2*(a + b), S = a*b;
+        out << P << " " << S << endl;
+    }
 }

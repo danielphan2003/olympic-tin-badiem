@@ -34,8 +34,8 @@ void process(int N) {
 
 int main()
 {
-    in.open("input/doc-bon-chu-so.inp");
-    out.open("output/doc-bon-chu-so.out");
+    in.open("doc-bon-chu-so.inp");
+    out.open("doc-bon-chu-so.out");
     
     int N;
     while (!in.eof()) {

@@ -1,35 +1,56 @@
-#include <iostream>
-#include <algorithm>
+#include <fstream>
+#include <stack>
 
 using namespace std;
 
+stack<int> sortStack(stack<int> input) {
+    stack<int> tmpStack;
+
+    while(!input.empty()) {
+        int tmp = input.top();
+        input.pop();
+
+        while(!tmpStack.empty() && tmpStack.top() < tmp) {
+            input.push(tmpStack.top());
+            tmpStack.pop();
+        }
+
+        tmpStack.push(tmp);
+    }
+
+    return tmpStack;
+}
+
 int main() {
-    int n, a[10001], max = 0;
-    cin >> n;
+    ifstream in("gia-tri-khac-nhau.inp");
+    ofstream out("gia-tri-khac-nhau.out");
+    
+    int n;
+    in >> n;
+
+    stack<int> input;
     for (int i = 0; i < n; i++) {
-        cin >> a[i];
+        int tmp;
+        in >> tmp;
+        input.push(tmp);
     }
     
-    sort(a,a+n);
-    int i = 0, xuat_hien = 0;
-    while (i < n) {
-        int tmp = a[i], curr = i, j;
-        while (a[i+1] == tmp) {
-            i++;
+    int count = 0;
+    stack<int> tmpStack = sortStack(input);
+    while (!tmpStack.empty()) {
+        int tmp = tmpStack.top();
+        tmpStack.pop();
+
+        while (!tmpStack.empty() && tmp == tmpStack.top()) {
+            tmpStack.pop();
         }
-        if (i - curr != 0) {
-            if (i - curr > xuat_hien) {
-                xuat_hien = i - curr;
-            }
-            for (j = curr + 1; j < n; j++) {
-                a[j] = a[j+xuat_hien+1];
-                a[j+xuat_hien+1] = 0;
-            }
-            n = n-xuat_hien;
-            i--;
+        
+        count++;
+        if (!tmpStack.empty()) {
+            tmpStack.pop();
+            count++;
         }
-        else i++;
     }
     
-    cout << xuat_hien << endl << n;
+    out << count;
 }
