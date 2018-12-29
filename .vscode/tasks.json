@@ -4,7 +4,7 @@
         {
             "label": "build & debug file",
             "type": "shell",
-            "command": "g++ ${file} -g -o ${fileBasenameNoExtension}; ./${fileBasenameNoExtension}",
+            "command": "g++ ${fileBasename} -g -o ${fileBasenameNoExtension} && ${fileBasenameNoExtension}",
             "presentation": {
                 "reveal": "always",
                 "panel": "shared"
@@ -17,7 +17,7 @@
         {
             "label": "build & run file",
             "type": "shell",
-            "command": "g++ ${file} -o ${fileBasenameNoExtension}; ./${fileBasenameNoExtension}",
+            "command": "g++ ${fileBasename} -o ${fileBasenameNoExtension} && ${fileBasenameNoExtension}",            
             "presentation": {
                 "reveal": "always",
                 "panel": "shared"

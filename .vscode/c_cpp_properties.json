@@ -13,15 +13,15 @@
             ],
             "includePath": [
                 "${workspaceFolder}/include",
-                "D:/MinGW/lib/gcc/mingw32/6.3.0/include/c++",
                 "D:/MinGW/lib/gcc/mingw32/6.3.0/include",
+                "D:/MinGW/lib/gcc/mingw32/6.3.0/include/c++",
                 "D:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed"
             ],
             "browse": {
                 "path": [
                     "${workspaceFolder}/include",
-                    "D:/MinGW/lib/gcc/mingw32/6.3.0/include/c++",
                     "D:/MinGW/lib/gcc/mingw32/6.3.0/include",
+                    "D:/MinGW/lib/gcc/mingw32/6.3.0/include/c++",
                     "D:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed"
                 ],
                 "limitSymbolsToIncludedHeaders": false,
