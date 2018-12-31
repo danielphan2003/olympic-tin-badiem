@@ -3,28 +3,28 @@
 using namespace std;
 
 int n, k;
-int C[1000010], dem_so_nghiem;
+int P[1000010], dem_so_nghiem;
 
 void ghi_nghiem() {
     dem_so_nghiem++;
     for (int i = 1; i <= k; i++)
-        cout << C[i] << ' ';
+        cout << P[i] << ' ';
     cout << endl;
 }
 
-void to_hop(int i) {
-    for (int v = C[i-1]+1; v <= n-k+i; ++v) {
-        C[i] = v;
-        if (i == k) {
+void chinh_hop_lap(int i) {
+    for (int v = 1; v <= n; ++v) {
+        P[i] = v;
+        if (i == k)
             ghi_nghiem();
-        } else
-            to_hop(i+1);
+        else
+            chinh_hop_lap(i+1);
     }
 }
 
 int main() {
     cin >> n >> k;
-    C[0] = 0;
-    to_hop(1);
+    P[0] = 0;
+    chinh_hop_lap(1);
     cout << dem_so_nghiem;
 }
