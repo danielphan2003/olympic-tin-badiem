@@ -2,7 +2,8 @@
     "configurations": [
         {
             "name": "Win32",
-            "intelliSenseMode": "msvc-x64",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "D:/MinGW/bin/gcc.exe",
             "defines": [
                 "_DEBUG",
                 "UNICODE",
@@ -12,21 +13,10 @@
                 "__cplusplus=201703L"
             ],
             "includePath": [
-                "${workspaceFolder}/include",
-                "D:/MinGW/lib/gcc/mingw32/6.3.0/include",
-                "D:/MinGW/lib/gcc/mingw32/6.3.0/include/c++",
-                "D:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed"
+                "${workspaceFolder}/include"
             ],
-            "browse": {
-                "path": [
-                    "${workspaceFolder}/include",
-                    "D:/MinGW/lib/gcc/mingw32/6.3.0/include",
-                    "D:/MinGW/lib/gcc/mingw32/6.3.0/include/c++",
-                    "D:/MinGW/lib/gcc/mingw32/6.3.0/include-fixed"
-                ],
-                "limitSymbolsToIncludedHeaders": false,
-                "databaseFilename": ""
-            }
+            "cStandard": "c11",
+            "cppStandard": "c++11"
         }
     ],
     "version": 4
