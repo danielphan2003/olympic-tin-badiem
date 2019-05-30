@@ -41,5 +41,4 @@ int main() {
     for (int i = 0; i <= wordCount; i++)
         cout << words[i] << " ";
 
-    return 0;
 }
