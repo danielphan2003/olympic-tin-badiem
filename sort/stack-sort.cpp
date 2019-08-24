@@ -1,4 +1,7 @@
-#include <bits/stdc++.h> 
+#include <iostream>
+#include <cstdio>
+#include <stack>
+
 using namespace std; 
   
 // This function return the sorted stack 
@@ -11,7 +14,7 @@ stack<int> sortStack(stack<int> &input)
         // pop out the first element 
         int tmp = input.top(); 
         input.pop(); 
-  
+        
         // while temporary stack is not empty and top 
         // of stack is greater than temp 
         while (!tmpStack.empty() && tmpStack.top() > tmp) 
