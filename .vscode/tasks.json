@@ -23,7 +23,10 @@
         {
             "label": "C/C++: Run",
             "type": "shell",
-            "command": "./${relativeFileDirname}/${fileBasenameNoExtension}",
+            "options": {
+                "cwd": "${relativeFileDirname}"
+            },
+            "command": "./${fileBasenameNoExtension}",
             "presentation": {
                 "reveal": "always",
                 "panel": "shared"

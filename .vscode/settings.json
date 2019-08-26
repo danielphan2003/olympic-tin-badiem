@@ -23,6 +23,23 @@
         "algorithm": "cpp",
         "stack": "cpp",
         "xstring": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "cmath": "cpp",
+        "array": "cpp",
+        "atomic": "cpp",
+        "cstdarg": "cpp",
+        "cstddef": "cpp",
+        "deque": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp",
+        "memory": "cpp",
+        "memory_resource": "cpp",
+        "optional": "cpp",
+        "string_view": "cpp",
+        "system_error": "cpp",
+        "tuple": "cpp",
+        "utility": "cpp",
+        "sstream": "cpp",
+        "stdexcept": "cpp"
     }
 }
