@@ -4,7 +4,7 @@
 // Convert string to integer using recursion.
 int convert(std::string number) {
     if (number == "") {
-        throw("Expected a number");
+        throw("Expected a number!");
     }
     // Get the left-most character and convert it to integer.
     // Substract by '0' gives us the real value of it
