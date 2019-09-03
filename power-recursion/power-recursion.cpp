@@ -1,8 +1,6 @@
 #include <iostream>
 #include <fstream>
 
-#include "power-recursion.h"
-
 double power(double base, int exponent) {
     if (exponent == 0) {
         return 1;
@@ -28,4 +26,4 @@ int main() {
     output << power(base, exponent) << "\n";
 
     return 0;
-}
+} 
