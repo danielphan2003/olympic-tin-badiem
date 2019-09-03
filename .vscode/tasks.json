@@ -5,11 +5,14 @@
             "label": "C/C++: Debug",
             "type": "shell",
             "command": "g++",
+            "options": {
+                "cwd": "${relativeFileDirname}"
+            },
             "args": [
-                "${relativeFile}",
+                "${fileBasename}",
                 "-g",
                 "-o",
-                "${relativeFileDirname}/${fileBasenameNoExtension}",
+                "${fileBasenameNoExtension}",
             ],
             "presentation": {
                 "reveal": "always",
@@ -40,11 +43,14 @@
         {
             "label": "C/C++: Build",
             "type": "shell",
-            "command": "g++",     
+            "command": "g++", 
+            "options": {
+                "cwd": "${relativeFileDirname}"
+            },    
             "args": [
-                "${relativeFile}",
+                "${fileBasename}",
                 "-o",
-                "${relativeFileDirname}/${fileBasenameNoExtension}"
+                "${fileBasenameNoExtension}"
             ]
         }
     ]
