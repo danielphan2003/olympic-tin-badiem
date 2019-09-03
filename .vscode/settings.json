@@ -41,5 +41,6 @@
         "utility": "cpp",
         "sstream": "cpp",
         "stdexcept": "cpp"
-    }
+    },
+    "discord.enabled": true
 }
