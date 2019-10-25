@@ -3,7 +3,7 @@
         {
             "name": "Win32",
             "intelliSenseMode": "gcc-x64",
-            "compilerPath": "D:/msys64/mingw64/bin/g++.exe",
+            "compilerPath": "D:/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/g++.exe",
             "defines": [
                 "_DEBUG",
                 "UNICODE",
@@ -16,7 +16,8 @@
                 "${workspaceFolder}/**"
             ],
             "cStandard": "c11",
-            "cppStandard": "c++20"
+            "cppStandard": "c++20",
+            "compilerArgs": []
         }
     ],
     "version": 4

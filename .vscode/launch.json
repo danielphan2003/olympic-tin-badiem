@@ -7,12 +7,12 @@
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
             "args": [],
-            "stopAtEntry": false,
+            "stopAtEntry": true,
             "cwd": "${fileDirname}",
             "environment": [],
             "externalConsole": true,
             "MIMode": "gdb",
-            "miDebuggerPath": "D:/msys64/mingw64/bin/gdb.exe",
+            "miDebuggerPath": "D:\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\gdb.exe",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
@@ -20,6 +20,8 @@
                     "ignoreFailures": false
                 }
             ],
+            "targetArchitecture": "x86_64",
+            "internalConsoleOptions": "openOnSessionStart",
             "preLaunchTask": "C/C++: Debug"
         }
     ]

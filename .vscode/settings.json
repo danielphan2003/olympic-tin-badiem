@@ -40,7 +40,21 @@
         "tuple": "cpp",
         "utility": "cpp",
         "sstream": "cpp",
-        "stdexcept": "cpp"
+        "stdexcept": "cpp",
+        "bit": "cpp",
+        "chrono": "cpp",
+        "cstring": "cpp",
+        "ctime": "cpp",
+        "list": "cpp",
+        "map": "cpp",
+        "set": "cpp",
+        "functional": "cpp",
+        "iterator": "cpp",
+        "numeric": "cpp",
+        "random": "cpp",
+        "ratio": "cpp",
+        "iomanip": "cpp",
+        "cinttypes": "cpp"
     },
     "discord.enabled": true
 }

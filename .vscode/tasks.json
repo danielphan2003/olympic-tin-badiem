@@ -12,7 +12,7 @@
                 "${fileBasename}",
                 "-g",
                 "-o",
-                "${fileBasenameNoExtension}",
+                "${fileBasenameNoExtension}"
             ],
             "presentation": {
                 "reveal": "always",

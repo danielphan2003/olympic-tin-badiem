@@ -3,7 +3,7 @@
     if (k == 1 || k == 0)
         return 1
     else
-        return fibo(k-1)+fibo(k-2)
+        return fibo(k_1)+fibo(k_2)
 }
 */
 #include <fstream>
