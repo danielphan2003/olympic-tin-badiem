@@ -1,57 +1,89 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "C/C++: Debug",
-            "type": "shell",
-            "command": "g++",
-            "options": {
-                "cwd": "${relativeFileDirname}"
-            },
-            "args": [
-                "${fileBasename}",
-                "-g",
-                "-o",
-                "${fileBasenameNoExtension}"
-            ],
-            "presentation": {
-                "reveal": "always",
-                "panel": "shared"
-            },
-            "group": {
-                "kind": "test",
-                "isDefault": true
-            }
-        },
-        {
-            "label": "C/C++: Run",
-            "type": "shell",
-            "options": {
-                "cwd": "${relativeFileDirname}"
-            },
-            "command": "./${fileBasenameNoExtension}",
-            "presentation": {
-                "reveal": "always",
-                "panel": "shared"
-            },
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "dependsOn": [ "C/C++: Build" ]
-        },
-        {
-            "label": "C/C++: Build",
-            "type": "shell",
-            "command": "g++", 
-            "options": {
-                "cwd": "${relativeFileDirname}"
-            },    
-            "args": [
-                "${fileBasename}",
-                "-o",
-                "${fileBasenameNoExtension}"
-            ]
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "C/C++: Debug",
+      "type": "shell",
+      "windows": {
+        "command": "g++"
+      },
+      "command": "clang++",
+      "options": {
+        "cwd": "${relativeFileDirname}"
+      },
+      "args": [
+        "${fileBasename}",
+        "-g",
+        "-o",
+        "${fileBasenameNoExtension}"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "C/C++: Run",
+      "type": "shell",
+      "windows": {
+        "command": "g++"
+      },
+      "options": {
+        "cwd": "${relativeFileDirname}"
+      },
+      "command": "./${fileBasenameNoExtension}",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "dependsOn": [
+        "C/C++: Build"
+      ]
+    },
+    {
+      "label": "C/C++: Build",
+      "type": "shell",
+      "windows": {
+        "command": "g++"
+      },
+      "command": "clang++",
+      "options": {
+        "cwd": "${relativeFileDirname}"
+      },
+      "args": [
+        "${fileBasename}",
+        "-o",
+        "${fileBasenameNoExtension}"
+      ]
+    },
+    {
+      "type": "shell",
+      "label": "C/C++: clang++ build active file",
+      "command": "/run/current-system/sw/bin/clang++",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
 }

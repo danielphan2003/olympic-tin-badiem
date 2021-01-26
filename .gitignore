@@ -67,3 +67,6 @@ __recovery/
 
 # VS Code ipch folder
 .vscode/ipch
+
+.vscode/tasks.json
+.vscode/launch.json

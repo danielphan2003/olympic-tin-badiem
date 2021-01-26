@@ -18,6 +18,17 @@
             "cStandard": "c11",
             "cppStandard": "c++20",
             "compilerArgs": []
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "compilerPath": "/run/current-system/sw/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "clang-x64"
         }
     ],
     "version": 4
